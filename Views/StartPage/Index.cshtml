@@ -1,0 +1,13 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model EpiBloggMax.Models.Pages.StartPage
+
+<div class="row">
+    <h1> @Html.PropertyFor(x => x.Heading)</h1>
+    
+    <img @Html.EditAttributes(m => m.MainImage)  src="@Url.ContentUrl(Model.MainImage)"/>
+    <div class="jumbotron">
+        @Html.PropertyFor(m => m.MainBody)
+    </div>
+</div>
